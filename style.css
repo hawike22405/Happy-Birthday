@@ -1,0 +1,684 @@
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+
+body{
+    background:#050005;
+    color:white;
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+
+/* Loader */
+
+.loader{
+
+position:fixed;
+
+height:100vh;
+
+width:100%;
+
+background:#000;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+z-index:999;
+
+animation:hide 3s forwards;
+
+}
+
+
+.heart-loader{
+
+font-size:80px;
+
+animation:beat 1s infinite;
+
+}
+
+
+.loader h2{
+
+margin-top:20px;
+
+color:#ff4da6;
+
+font-size:20px;
+
+}
+
+
+
+@keyframes beat{
+
+50%{
+
+transform:scale(1.3);
+
+}
+
+}
+
+
+@keyframes hide{
+
+0%,80%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:0;
+
+visibility:hidden;
+
+}
+
+}
+
+
+
+
+/* Hero */
+
+
+.hero{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+background:
+
+radial-gradient(circle,#4d0033,#050005);
+
+}
+
+
+
+.content{
+
+    animation:appear 2s ease;
+    position:relative;
+    z-index:10;
+
+}
+
+
+
+.small-text{
+
+font-size:20px;
+
+color:#ffb3d9;
+
+}
+
+
+
+h1{
+
+font-family:'Great Vibes',cursive;
+
+font-size:100px;
+
+color:#ff4da6;
+
+text-shadow:
+
+0 0 20px #ff4da6;
+
+}
+
+
+
+h2{
+
+font-size:35px;
+
+margin:20px;
+
+}
+
+
+
+.message{
+
+font-size:20px;
+
+line-height:2;
+
+color:#eee;
+
+}
+
+
+
+button{
+
+margin-top:40px;
+
+padding:18px 45px;
+
+border:none;
+
+border-radius:50px;
+
+background:#ff4da6;
+
+color:white;
+
+font-size:20px;
+
+cursor:pointer;
+
+box-shadow:
+
+0 0 30px #ff4da6;
+
+transition:.4s;
+
+}
+
+
+button:hover{
+
+transform:scale(1.1);
+
+}
+
+
+
+/* Stars */
+
+.stars{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background-image:
+radial-gradient(white 1px,transparent 1px);
+
+background-size:40px 40px;
+
+opacity:.3;
+
+pointer-events:none;
+
+
+}
+
+
+
+
+@keyframes appear{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+
+
+@media(max-width:600px){
+
+
+h1{
+
+font-size:70px;
+
+}
+
+
+h2{
+
+font-size:25px;
+
+}
+
+
+.message{
+
+font-size:16px;
+
+}
+
+
+}
+
+/* Birthday Letter */
+
+
+.letter-section{
+
+min-height:100vh;
+
+background:
+
+linear-gradient(
+135deg,
+#050005,
+#33001f
+);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:40px;
+
+}
+
+
+
+.letter-box{
+
+max-width:800px;
+
+background:
+
+rgba(255,255,255,0.08);
+
+padding:50px;
+
+border-radius:30px;
+
+backdrop-filter:blur(15px);
+
+box-shadow:
+
+0 0 40px #ff4da6;
+
+line-height:2;
+
+font-size:18px;
+
+}
+
+
+
+.letter-box h1{
+
+font-size:60px;
+
+margin-bottom:30px;
+
+}
+
+
+
+.letter-box p{
+
+margin-bottom:20px;
+
+}
+
+
+
+#musicBtn{
+    display:inline-block;
+    background:#ff4da6;
+    color:white;
+    padding:15px 35px;
+    margin-top:30px;
+    border:none;
+    border-radius:50px;
+    font-size:20px;
+    font-weight:600;
+    cursor:pointer;
+    box-shadow:0 0 20px #ff4da6;
+    transition:0.3s;
+}
+
+#musicBtn:hover{
+    transform:scale(1.05);
+    background:#ff2d8d;
+}
+
+
+
+/* Floating Hearts */
+
+
+.floating-heart{
+
+position:fixed;
+
+bottom:-20px;
+
+font-size:25px;
+
+animation:floatHeart 6s linear infinite;
+
+}
+
+
+
+@keyframes floatHeart{
+
+
+0%{
+
+transform:translateY(0);
+
+opacity:1;
+
+}
+
+
+100%{
+
+transform:translateY(-110vh);
+
+opacity:0;
+
+}
+
+
+}
+
+/* ========================= */
+/* Timeline Section */
+/* ========================= */
+
+.timeline-section{
+    min-height:100vh;
+    padding:80px 20px;
+    background:#080008;
+    text-align:center;
+}
+
+.timeline-section h2{
+    color:#ff4da6;
+    font-size:45px;
+    margin-bottom:40px;
+    font-family:'Great Vibes',cursive;
+}
+
+.timeline-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+}
+
+.photo-box{
+    width:420px;
+    background:rgba(255,255,255,0.08);
+    border-radius:25px;
+    padding:20px;
+    box-shadow:0 0 35px #ff4da6;
+    text-align:center;
+}
+
+.photo-box img{
+    width:100%;
+    height:520px;
+    object-fit:cover;
+    border-radius:20px;
+    transition:opacity 0.6s ease;
+}
+
+.fade{
+    opacity:0;
+}
+
+#prevBtn,
+#nextBtn{
+    width:60px;
+    height:60px;
+    border:none;
+    border-radius:50%;
+    background:#ff4da6;
+    color:white;
+    font-size:30px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+#prevBtn:hover,
+#nextBtn:hover{
+    transform:scale(1.1);
+}
+
+.photo-box h3{
+    color:#ff7ab6;
+    margin-top:20px;
+    font-size:30px;
+}
+
+#timelineDate{
+    color:#ffd4e7;
+    margin:10px 0;
+    font-size:18px;
+}
+
+#timelineDescription{
+    color:white;
+    font-size:18px;
+    line-height:1.8;
+    margin-top:10px;
+}
+
+/* ========================= */
+/* Final Surprise */
+/* ========================= */
+
+.final-section{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(180deg,#050005,#33001f);
+    padding:40px;
+}
+
+.final-card{
+    max-width:800px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(12px);
+    padding:60px;
+    border-radius:30px;
+    text-align:center;
+    box-shadow:0 0 40px #ff4da6;
+}
+
+.final-card h1{
+    font-size:70px;
+    color:#ff4da6;
+    margin-bottom:30px;
+    font-family:'Great Vibes',cursive;
+}
+
+.final-card p{
+    font-size:22px;
+    line-height:2;
+    color:white;
+    margin-bottom:35px;
+}
+
+#confettiBtn{
+    padding:18px 40px;
+    border:none;
+    border-radius:50px;
+    background:#ff4da6;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+    box-shadow:0 0 30px #ff4da6;
+}
+
+/* ========================= */
+/* Scroll Animation */
+/* ========================= */
+
+.hidden{
+    opacity:0;
+    transform:translateY(80px);
+    transition:all 1s ease;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.fade{
+
+    animation:fade .6s ease;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+        transform:scale(.95);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:scale(1);
+
+    }
+
+}
+
+/* Romantic Popup */
+
+.love-popup{
+
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.75);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.5s;
+
+    z-index:99999;
+
+}
+
+.love-popup.show{
+
+    opacity:1;
+    visibility:visible;
+
+}
+
+.popup-box{
+
+    width:90%;
+    max-width:650px;
+
+    background:#240015;
+
+    border-radius:30px;
+
+    padding:45px;
+
+    text-align:center;
+
+    box-shadow:0 0 40px #ff4da6;
+
+    animation:popup .5s ease;
+
+}
+
+.popup-box h2{
+
+    color:#ff4da6;
+
+    margin-bottom:25px;
+
+}
+
+.popup-box p{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+}
+
+#closePopup{
+
+    margin-top:35px;
+
+}
+
+@keyframes popup{
+
+    from{
+
+        transform:scale(.6);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
