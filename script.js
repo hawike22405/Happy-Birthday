@@ -1,6 +1,22 @@
 const music = document.getElementById("music");
 const musicBtn = document.getElementById("musicBtn");
 
+// Initialize button label
+musicBtn.innerHTML = "▶ Play Our Song ❤️";
+
+// Debug: log current source and listen for load errors
+console.log('Audio element currentSrc (initial):', music.currentSrc);
+
+music.addEventListener('loadeddata', () => {
+  console.log('Audio loaded:', music.currentSrc);
+  musicBtn.innerHTML = "▶ Play Our Song ❤️";
+});
+
+music.addEventListener('error', (e) => {
+  console.error('Audio failed to load:', e, 'currentSrc=', music.currentSrc);
+  musicBtn.innerHTML = "⚠️ Song missing";
+});
+
 musicBtn.addEventListener("click", async () => {
 
     if (music.paused) {
@@ -13,7 +29,8 @@ musicBtn.addEventListener("click", async () => {
 
         } catch (err) {
 
-            console.log(err);
+            console.error('Play failed:', err);
+            alert('Unable to play audio. Check console for details and ensure assets/humsafar.mpeg exists and is reachable.');
 
         }
 
